@@ -289,7 +289,7 @@ $("ph").onchange=async function(){var el=this,f=el.files[0];if(!f)return;msg("Ad
 try{var im;try{im=await loadImg(f)}catch(e){await heicLib();var b=await heic2any({blob:f,toType:"image/jpeg",quality:.9});im=await loadImg(Array.isArray(b)?b[0]:b)}
 var w=im.naturalWidth||im.width,h=im.naturalHeight||im.height,s=Math.min(w,h),c=document.createElement("canvas");c.width=c.height=300;c.getContext("2d").drawImage(im,(w-s)/2,(h-s)/2,s,s,0,0,300,300);S.photo=c.toDataURL("image/jpeg",.85);render();msg("Photo added.")}catch(e){msg("That file couldn’t be read as a photo. Try another image or a screenshot of it.")}el.value=""};
 $("print").className="btn";$("print").textContent="Print";
-$("print").insertAdjacentHTML("beforebegin",'<button class="btn p" id="dpdf" style="margin:0">Download PDF</button> <button class="btn" id="dhtml" style="margin:0">Download HTML</button> ');
+$("print").insertAdjacentHTML("beforebegin",'<button class="btn p" id="dpdf" style="margin:0">Download PDF</button> ');
 function fname(){return(S.name||"resume").replace(/[^\w\- ]+/g,"").trim().replace(/\s+/g,"-")+(mode==="cover"?"-cover-letter":"-resume")}
 function lib(src,test){return new Promise(function(ok,no){if(test())return ok();var s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
 $("dpdf").onclick=async function(){var p=$("paper"),z=p.style.zoom,b=this;b.disabled=true;msg("Making your PDF…");
@@ -299,8 +299,6 @@ p.style.zoom=1;var cv=await html2canvas(p.firstChild,{scale:2,backgroundColor:"#
 var d=new jspdf.jsPDF({unit:"mm",format:"a4"}),W=210,H=297,ph=Math.floor(cv.width*H/W),n=Math.max(1,Math.ceil(cv.height/ph-0.01));
 for(var i=0;i<n;i++){var c=document.createElement("canvas");c.width=cv.width;c.height=Math.min(ph,cv.height-i*ph);c.getContext("2d").drawImage(cv,0,i*ph,cv.width,c.height,0,0,cv.width,c.height);if(i)d.addPage();d.addImage(c.toDataURL("image/jpeg",.95),"JPEG",0,0,W,c.height*W/cv.width)}
 await dl(fname()+".pdf",d.output("blob"));msg("")}catch(e){p.style.zoom=z;msg("The PDF couldn’t be made here. Check your connection or open the page in its own tab.")}b.disabled=false};
-$("dhtml").onclick=function(){var st=[].map.call(document.querySelectorAll("style"),function(s){return s.textContent}).join("\n");
-dl(fname()+".html",'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(S.name)+'</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet"><style>'+st+'body{background:#eee}.paper{zoom:1!important}</style></head><body><div class="paper">'+(mode==="cover"?letter():build())+"</div></body></html>")};
 $("print").onclick=function(){try{window.print();msg("If no print window opened, use Download PDF and print that file.")}catch(e){msg("Printing is blocked here. Use Download PDF and print that file.")}};
 refill();
 </script>
