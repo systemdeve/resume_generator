@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Resume Maker Online: Build a Resume and Download PDF</title>
+<meta name="description" content="Free online resume maker and CV builder. Pick a layout and color, add your photo, write a cover letter, and download your resume as a PDF. No sign-up needed.">
+<meta name="keywords" content="resume maker, free resume builder, CV maker, resume template, resume PDF, cover letter, ATS resume, bookkeeper resume, virtual assistant resume, social media manager resume, fresh graduate resume, Philippines resume">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/REPOSITORY-NAME/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Resume Maker Online">
+<meta property="og:description" content="Build a resume with your choice of layout, color and photo, then download it as a PDF.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/REPOSITORY-NAME/">
+<meta name="twitter:card" content="summary">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f2ef;--panel:#fff;--ink:#1d2024;--mute:#656b73;--line:#d9d9d4;--pri:#1f5f8b;--onpri:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17191c;--panel:#22252a;--ink:#eceae6;--mute:#9aa0a8;--line:#383c42}}
+:root[data-theme="dark"]{--bg:#17191c;--panel:#22252a;--ink:#eceae6;--mute:#9aa0a8;--line:#383c42}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+.app{display:grid;grid-template-columns:400px 1fr;gap:0;min-height:100vh}
+.ctrl{background:var(--panel);border-right:1px solid var(--line);padding:18px 18px 40px;overflow-y:auto;max-height:100vh;position:sticky;top:0}
+.ctrl h1{font-size:20px;margin:0 0 2px}
+.ctrl .sub{color:var(--mute);margin:0 0 14px;font-size:13px}
+details{border-top:1px solid var(--line);padding:10px 0}
+summary{cursor:pointer;font-weight:600;padding:4px 0}
+label{display:block;font-size:12px;color:var(--mute);margin:10px 0 3px}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 9px}
+textarea{resize:vertical;min-height:70px}
+:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.opt{border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:8px;cursor:pointer;font:inherit;text-align:left}
+.opt b{display:block;font-size:13px}.opt small{color:var(--mute);font-size:11px}
+.opt[aria-pressed="true"]{border-color:var(--pri);background:var(--panel)}
+.sw{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.sw button{width:38px;height:38px;border-radius:50%;border:3px solid var(--panel);box-shadow:0 0 0 1px var(--line);cursor:pointer}
+.sw button[aria-pressed="true"]{box-shadow:0 0 0 3px var(--ink)}
+.card{border:1px solid var(--line);border-radius:8px;padding:2px 10px 12px;margin-top:10px}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.btn{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:6px;padding:7px 12px;font:inherit;cursor:pointer;margin-top:10px}
+.btn.p{background:var(--pri);border-color:var(--pri);color:#fff;font-weight:600}
+.btn.d{color:#b3402f;float:right;margin-top:6px;padding:3px 8px;font-size:12px}
+.pv{padding:20px 12px;overflow-x:hidden}
+.bar{max-width:794px;margin:0 auto 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.bar span{color:var(--mute);font-size:13px}
+.paper{width:794px;min-height:1123px;margin:0 auto;background:#fff;color:#222;box-shadow:0 2px 18px rgba(0,0,0,.18);transform-origin:top left}
+/* resume */
+.r{--a:#1f5f8b;--f:Inter,sans-serif;font-family:var(--f);font-size:13px;line-height:1.5;min-height:1123px}
+.r h1{margin:0;font-size:32px;line-height:1.1}
+.r h2{font-size:13px;margin:0 0 6px;color:var(--a);letter-spacing:.06em}
+.r p{margin:0}.r ul{margin:4px 0 0;padding-left:18px}.r li{margin:2px 0}
+.r .it{margin-bottom:11px}.r .hd{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+.r .hd i{font-style:normal;font-weight:400;color:#666;white-space:nowrap}
+.r .co{color:#555}.r section{margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}.chips span{border:1px solid var(--a);color:var(--a);border-radius:99px;padding:1px 9px;font-size:12px}
+.classic{padding:44px 52px}.classic header{text-align:center;border-bottom:3px solid var(--a);padding-bottom:14px;margin-bottom:18px}
+.classic .t{font-size:16px;color:var(--a);margin-top:4px}.classic .c{color:#555;margin-top:6px}
+.classic h2{border-bottom:1px solid #ccc;padding-bottom:3px;text-transform:uppercase}
+.side{display:grid;grid-template-columns:250px 1fr}
+.side aside{background:var(--a);color:#fff;padding:44px 24px}.side aside h1{font-size:27px}
+.side aside .t{margin:6px 0 20px;opacity:.9}.side aside h2{color:#fff;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:3px;margin-top:18px}
+.side aside .chips span{border-color:#fff;color:#fff}.side aside p{word-break:break-word;margin-bottom:3px}
+.side main{padding:44px 36px}
+.modern .ban{background:var(--a);color:#fff;padding:40px 52px 30px}.modern .t{font-size:17px;margin-top:5px;opacity:.92}
+.modern .c{margin-top:10px;opacity:.9;display:flex;gap:6px 18px;flex-wrap:wrap}
+.modern .bd{display:grid;grid-template-columns:1fr 220px;gap:30px;padding:30px 52px}
+.modern h2{font-size:15px}
+.minimal{padding:52px 60px}.minimal h1{font-weight:400;font-size:38px}.minimal .t{color:#666;font-size:15px;margin-top:3px}
+.minimal .c{margin-top:8px;color:#555}.minimal header{margin-bottom:24px}
+.minimal section{display:grid;grid-template-columns:130px 1fr;gap:14px}.minimal h2{color:#777;font-weight:600;margin-top:2px}
+@media (max-width:900px){.app{grid-template-columns:1fr}.ctrl{position:static;max-height:none;border-right:0}}
+@media print{
+@page{margin:0;size:A4}
+body{background:#fff}.ctrl,.bar{display:none}.app{display:block}.pv{padding:0}
+.paper{box-shadow:none;zoom:1!important;width:210mm;min-height:297mm}
+.r{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+label[for="ad"],#ad,#tl,#cl,#tr,[data-ai]{display:none!important}
+.adbox{max-width:794px;margin:16px auto;text-align:center;min-height:90px}.adbox small{display:block;color:var(--mute);font-size:11px;margin-bottom:4px}.ctrl .adbox{max-width:100%}.plink{font-size:12px;margin-top:18px}.plink a{color:var(--mute)}@media print{.adbox,.plink{display:none!important}}
+.about{max-width:794px;margin:30px auto 50px;padding:0 18px;color:var(--mute);font-size:14px;line-height:1.65}.about h2{color:var(--ink);font-size:18px;margin:22px 0 6px}.about h3{color:var(--ink);font-size:15px;margin:16px 0 4px}.about p{margin:0 0 8px}@media print{.about{display:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="ctrl">
+<h1>Resume Maker</h1>
+<p class="sub">Fill in your details, pick a look, then save as PDF.</p>
+<details open><summary>Design</summary>
+<label>Layout</label><div class="opts" id="layouts"></div>
+<label>Color theme</label><div class="sw" id="themes"></div>
+<label for="font">Font</label><select id="font"></select>
+</details>
+<details open><summary>About you</summary>
+<label for="name">Full name</label><input id="name">
+<label for="title">Job title</label><input id="title">
+<div class="row"><div><label for="email">Email</label><input id="email"></div><div><label for="phone">Phone</label><input id="phone"></div></div>
+<div class="row"><div><label for="loc">Location</label><input id="loc"></div><div><label for="web">Website</label><input id="web"></div></div>
+<label for="sum">Summary</label><textarea id="sum"></textarea>
+</details>
+<details><summary>Experience</summary><div id="exp"></div><button class="btn" id="addExp">Add job</button></details>
+<details><summary>Education</summary><div id="edu"></div><button class="btn" id="addEdu">Add school</button></details>
+<details><summary>Skills and certificates</summary>
+<label for="skills">Skills (separate with commas)</label><textarea id="skills"></textarea>
+<label for="certs">Certificates (one per line)</label><textarea id="certs"></textarea>
+</details>
+<button class="btn" id="reset">Reset to sample</button>
+</div>
+<div class="pv" id="pv">
+<div class="bar"><span>Live preview, A4 size</span><button class="btn p" id="print" style="margin:0">Print or save as PDF</button></div>
+<div class="paper" id="paper"></div>
+</div>
+</div>
+<section class="about">
+<h2>Free online resume maker</h2>
+<p>Resume Maker is a free resume builder and CV maker that works in your browser. Choose a resume template, pick a color theme and font, add your photo, and see your resume update as you type. When you are done, download it as a PDF or print it. You do not need to sign up, and your details stay on your own device.</p>
+<h3>Resume templates for common jobs</h3>
+<p>Start from a ready-made template for a bookkeeper, virtual assistant, social media manager or fresh graduate, or use a plain ATS-friendly resume that applicant-screening software can read easily. You can keep several versions of your resume, for example one for each type of job.</p>
+<h3>Resume and cover letter tips</h3>
+<p>Keep your resume to one page when you can, start each achievement with an action word, and add numbers where you have them. Use words from the job ad in your skills and summary, and match your cover letter to the same design as your resume.</p>
+<h3>Resume guides</h3>
+<p><a href="bookkeeper-resume.html">Bookkeeper resume example</a> &middot; <a href="virtual-assistant-resume.html">Virtual assistant resume example</a> &middot; <a href="social-media-manager-resume.html">Social media manager resume example</a></p>
+</section>
+<script>
+var THEMES=[["Ocean","#1f5f8b"],["Forest","#2f6b4f"],["Plum","#6b3a7d"],["Crimson","#a8323e"],["Slate","#374151"],["Sunset","#c2571a"],["Rose","#c2457a"],["Teal","#0f766e"]];
+var FONTS=[["Inter (clean sans)","Inter,system-ui,sans-serif"],["Lora (classic serif)","Lora,Georgia,serif"],["Poppins (friendly)","Poppins,Helvetica,sans-serif"],["Roboto Slab (sturdy)","'Roboto Slab',Georgia,serif"]];
+var LAYOUTS=[["classic","Classic","Centered header, single column"],["side","Sidebar","Colored side panel"],["modern","Banner","Bold header, two columns"],["minimal","Minimal","Quiet, label on the left"]];
+function sample(){return{layout:"classic",theme:0,font:0,name:"Your Name",title:"Bookkeeper and Virtual Assistant",email:"you@email.com",phone:"+63 900 000 0000",loc:"Manila, Philippines",web:"yourportfolio.com",
+sum:"Detail-oriented professional with experience in bookkeeping, administrative support and social media management. Reliable, organized and comfortable working with remote teams and international clients.",
+exp:[{role:"Bookkeeper",co:"Company or client name",dates:"2022 – Present",pts:"Reconciled bank accounts and prepared monthly financial reports\nProcessed invoices, payables and receivables with full accuracy\nCut month-end closing time by two days"},
+{role:"Social Media Manager",co:"Small business",dates:"2019 – 2022",pts:"Planned and scheduled weekly content across Facebook and Instagram\nGrew page engagement through consistent posting and customer replies"}],
+edu:[{school:"University name",deg:"Bachelor’s degree in Accountancy",dates:"2014 – 2018"}],
+skills:"Bookkeeping, QuickBooks, Excel, Canva, Meta Business Suite, Email management, Customer support",certs:"Certified Bookkeeper (CB)\nSocial Media Marketing Course"}}
+var S=load();
+function load(){try{var x=localStorage.getItem("resume-maker");if(x){var o=JSON.parse(x);if(o&&o.exp)return o}}catch(e){}return sample()}
+function save(){try{localStorage.setItem("resume-maker",JSON.stringify(S))}catch(e){}}
+function esc(t){return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function $(i){return document.getElementById(i)}
+function lines(t){return String(t||"").split("\n").map(function(s){return s.trim()}).filter(Boolean)}
+function ul(t){var l=lines(t);return l.length?"<ul>"+l.map(function(x){return"<li>"+esc(x)+"</li>"}).join("")+"</ul>":""}
+function contacts(){return[S.email,S.phone,S.loc,S.web].filter(Boolean)}
+function sec(h,b){return b?"<section><h2>"+h+"</h2><div>"+b+"</div></section>":""}
+function expH(){return S.exp.map(function(e){return'<div class="it"><div class="hd"><span>'+esc(e.role)+(e.co?' <span class="co">· '+esc(e.co)+"</span>":"")+"</span><i>"+esc(e.dates)+"</i></div>"+ul(e.pts)+"</div>"}).join("")}
+function eduH(){return S.edu.map(function(e){return'<div class="it"><div class="hd"><span>'+esc(e.deg)+"</span><i>"+esc(e.dates)+'</i></div><div class="co">'+esc(e.school)+"</div></div>"}).join("")}
+function chips(){var l=S.skills.split(",").map(function(s){return s.trim()}).filter(Boolean);return l.length?'<div class="chips">'+l.map(function(s){return"<span>"+esc(s)+"</span>"}).join("")+"</div>":""}
+function certH(){return lines(S.certs).map(function(c){return"<p>"+esc(c)+"</p>"}).join("")}
+function build(){
+var L=S.layout,sm=S.sum?"<p>"+esc(S.sum)+"</p>":"",c=contacts(),h="";
+if(L==="classic"){h='<header><h1>'+esc(S.name)+'</h1><div class="t">'+esc(S.title)+'</div><div class="c">'+c.map(esc).join("  |  ")+"</div></header>"+sec("Summary",sm)+sec("Experience",expH())+sec("Education",eduH())+sec("Skills",chips())+sec("Certificates",certH())}
+else if(L==="side"){h='<aside><h1>'+esc(S.name)+'</h1><div class="t">'+esc(S.title)+"</div>"+sec("Contact",c.map(function(x){return"<p>"+esc(x)+"</p>"}).join(""))+sec("Skills",chips())+sec("Certificates",certH())+"</aside><main>"+sec("Summary",sm)+sec("Experience",expH())+sec("Education",eduH())+"</main>"}
+else if(L==="modern"){h='<div class="ban"><h1>'+esc(S.name)+'</h1><div class="t">'+esc(S.title)+'</div><div class="c">'+c.map(function(x){return"<span>"+esc(x)+"</span>"}).join("")+'</div></div><div class="bd"><div>'+sec("Profile",sm)+sec("Experience",expH())+"</div><div>"+sec("Skills",chips())+sec("Education",eduH())+sec("Certificates",certH())+"</div></div>"}
+else{h='<header><h1>'+esc(S.name)+'</h1><div class="t">'+esc(S.title)+'</div><div class="c">'+c.map(esc).join("   ")+"</div></header>"+sec("Summary",sm)+sec("Experience",expH())+sec("Education",eduH())+sec("Skills",chips())+sec("Certificates",certH())}
+return'<div class="r '+L+'" style="--a:'+THEMES[S.theme][1]+";--f:"+FONTS[S.font][1]+'">'+h+"</div>"}
+function render(){$("paper").innerHTML=build();fit();save()}
+function fit(){var w=$("pv").clientWidth-24,z=Math.min(1,w/794);$("paper").style.zoom=z}
+function pressed(){
+[].forEach.call(document.querySelectorAll("#layouts .opt"),function(b){b.setAttribute("aria-pressed",b.dataset.v===S.layout)});
+[].forEach.call(document.querySelectorAll("#themes button"),function(b){b.setAttribute("aria-pressed",+b.dataset.v===S.theme)});
+document.documentElement.style.setProperty("--pri",THEMES[S.theme][1])}
+function field(k,v){return'<label>'+k[1]+'</label><input data-k="'+k[0]+'" value="'+esc(v)+'">'}
+function lists(){
+$("exp").innerHTML=S.exp.map(function(e,i){return'<div class="card" data-l="exp" data-i="'+i+'"><button class="btn d" data-del="exp" data-i="'+i+'">Remove</button>'+field(["role","Job title"],e.role)+field(["co","Company"],e.co)+field(["dates","Dates"],e.dates)+'<label>Achievements (one per line)</label><textarea data-k="pts">'+esc(e.pts)+"</textarea></div>"}).join("");
+$("edu").innerHTML=S.edu.map(function(e,i){return'<div class="card" data-l="edu" data-i="'+i+'"><button class="btn d" data-del="edu" data-i="'+i+'">Remove</button>'+field(["deg","Degree or course"],e.deg)+field(["school","School"],e.school)+field(["dates","Dates"],e.dates)+"</div>"}).join("")}
+function init(){
+$("layouts").innerHTML=LAYOUTS.map(function(l){return'<button class="opt" data-v="'+l[0]+'"><b>'+l[1]+"</b><small>"+l[2]+"</small></button>"}).join("");
+$("themes").innerHTML=THEMES.map(function(t,i){return'<button data-v="'+i+'" title="'+t[0]+'" aria-label="'+t[0]+'" style="background:'+t[1]+'"></button>'}).join("");
+$("font").innerHTML=FONTS.map(function(f,i){return'<option value="'+i+'">'+f[0]+"</option>"}).join("");
+$("font").value=S.font;
+["name","title","email","phone","loc","web","sum","skills","certs"].forEach(function(k){var el=$(k);el.value=S[k]||"";el.addEventListener("input",function(){S[k]=el.value;render()})});
+lists();pressed();render()}
+document.addEventListener("click",function(e){
+var t=e.target.closest("button");if(!t)return;
+if(t.closest("#layouts")){S.layout=t.dataset.v;pressed();render()}
+else if(t.closest("#themes")){S.theme=+t.dataset.v;pressed();render()}
+else if(t.dataset.del){S[t.dataset.del].splice(+t.dataset.i,1);lists();render()}
+});
+$("font").addEventListener("change",function(){S.font=+$("font").value;render()});
+document.addEventListener("input",function(e){var c=e.target.closest(".card");if(!c||!e.target.dataset.k)return;S[c.dataset.l][+c.dataset.i][e.target.dataset.k]=e.target.value;render()});
+$("addExp").onclick=function(){S.exp.push({role:"",co:"",dates:"",pts:""});lists();render()};
+$("addEdu").onclick=function(){S.edu.push({school:"",deg:"",dates:""});lists();render()};
+$("reset").onclick=function(){S=sample();init()};
+$("print").onclick=function(){try{window.print()}catch(e){alert("Printing is blocked here. Open the page in its own tab, then try again.")}};
+window.addEventListener("resize",function(){fit()});
+</script>
+<script>
+var KEY="resume-maker-v2",ST,mode="resume";
+var DEF={hide:{},size:13,compact:false,custom:"",photo:"",projects:"",langs:"",refs:"",cover:"",ad:"",label:"My resume"};
+var SK=[["sum","Summary"],["exp","Experience"],["edu","Education"],["skills","Skills"],["certs","Certificates"],["proj","Projects"],["lang","Languages"],["refs","References"]];
+var FL=["name","title","email","phone","loc","web","sum","skills","certs","projects","langs","refs","ad","cover"];
+function norm(o){o=Object.assign({},DEF,o);o.hide=o.hide||{};return o}
+function load(){try{var x=JSON.parse(localStorage.getItem(KEY));if(x&&x.items&&x.items.length)return x}catch(e){}
+var old;try{old=JSON.parse(localStorage.getItem("resume-maker"))}catch(e){}
+return{cur:0,items:[old&&old.exp?old:sample()]}}
+function save(){try{ST.items[ST.cur]=S;localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}}
+function acc(){return S.custom||THEMES[S.theme][1]}
+function msg(t){$("aimsg").textContent=t}
+function chipsOf(t){var l=String(t||"").split(",").map(function(s){return s.trim()}).filter(Boolean);return l.length?'<div class="chips">'+l.map(function(s){return"<span>"+esc(s)+"</span>"}).join("")+"</div>":""}
+function blocks(){var m=S.sum?"<p>"+esc(S.sum)+"</p>":"",pj=lines(S.projects).map(function(x){return"<li>"+esc(x)+"</li>"}).join("");
+var o={sum:sec("Summary",m),exp:sec("Experience",expH()),edu:sec("Education",eduH()),skills:sec("Skills",chipsOf(S.skills)),certs:sec("Certificates",certH()),proj:sec("Projects",pj?"<ul>"+pj+"</ul>":""),lang:sec("Languages",chipsOf(S.langs)),refs:sec("References",lines(S.refs).map(function(x){return"<p>"+esc(x)+"</p>"}).join(""))};
+Object.keys(o).forEach(function(k){if(S.hide[k])o[k]=""});return o}
+function build(L){L=L||S.layout;var o=blocks(),c=contacts(),cs=c.map(esc),im=S.photo?'<img class="ph" src="'+S.photo+'" alt="">':"",n="<h1>"+esc(S.name)+"</h1>",t='<div class="t">'+esc(S.title)+"</div>",h;
+if(L==="classic")h="<header>"+im+n+t+'<div class="c">'+cs.join("  |  ")+"</div></header>"+o.sum+o.exp+o.proj+o.edu+o.skills+o.lang+o.certs+o.refs;
+else if(L==="side")h="<aside>"+im+n+t+sec("Contact",c.map(function(x){return"<p>"+esc(x)+"</p>"}).join(""))+o.skills+o.lang+o.certs+"</aside><main>"+o.sum+o.exp+o.proj+o.edu+o.refs+"</main>";
+else if(L==="modern")h='<div class="ban"><div>'+n+t+'<div class="c">'+c.map(function(x){return"<span>"+esc(x)+"</span>"}).join("")+"</div></div>"+im+'</div><div class="bd"><div>'+o.sum+o.exp+o.proj+"</div><div>"+o.skills+o.lang+o.edu+o.certs+o.refs+"</div></div>";
+else if(L==="ats")h="<header>"+im+n+t+'<div class="c">'+cs.join(" | ")+"</div></header>"+o.sum+o.skills+o.exp+o.proj+o.edu+o.certs+o.lang+o.refs;
+else h="<header>"+im+n+t+'<div class="c">'+cs.join("   ")+"</div></header>"+o.sum+o.exp+o.proj+o.edu+o.skills+o.lang+o.certs+o.refs;
+return'<div class="r '+L+(S.compact?" cp":"")+'" style="--a:'+acc()+";--f:"+FONTS[S.font][1]+";font-size:"+S.size+'px">'+h+"</div>"}
+function letter(){return'<div class="r letter" style="--a:'+acc()+";--f:"+FONTS[S.font][1]+";font-size:"+S.size+'px"><div class="lh"><h1>'+esc(S.name)+"</h1><div>"+esc(S.title)+'</div><div style="opacity:.9;margin-top:6px">'+contacts().map(esc).join("  |  ")+'</div></div><div class="lb">'+esc(S.cover||"Your cover letter shows here. Paste a job ad on the left and ask Claude to write it, or type your own.")+"</div></div>"}
+function render(){$("paper").innerHTML=mode==="cover"?letter():build();fit();save()}
+function fit(){var p=$("paper"),w=$("pv").clientWidth-24;p.style.zoom=1;var h=p.firstChild?p.firstChild.scrollHeight:0;p.style.zoom=Math.min(1,w/794);var g=$("pg");if(g)g.textContent=h>1128?"Runs to "+Math.ceil(h/1123-0.02)+" pages. Try compact spacing or a smaller size.":"Fits on one page"}
+function pressed(){[].forEach.call(document.querySelectorAll("#layouts .opt"),function(b){b.setAttribute("aria-pressed",b.dataset.v===S.layout)});[].forEach.call(document.querySelectorAll("#themes button"),function(b){b.setAttribute("aria-pressed",!S.custom&&+b.dataset.v===S.theme)});document.documentElement.style.setProperty("--pri",acc())}
+var _l=lists;lists=function(){_l();[].forEach.call(document.querySelectorAll(".card[data-l]"),function(c){var l=c.dataset.l,i=c.dataset.i,d=c.querySelector(".btn.d");
+d.insertAdjacentHTML("beforebegin",'<div class="tb"><button class="btn" data-mv="-1" data-l="'+l+'" data-i="'+i+'">Move up</button><button class="btn" data-mv="1" data-l="'+l+'" data-i="'+i+'">Move down</button>'+(l==="exp"?'<button class="btn" data-ai="'+i+'">Improve with Claude</button>':"")+"</div>");d.previousElementSibling.appendChild(d)})};
+async function ask(p,json){var s=window.claude?await claude.use("sample"):null;if(!s)throw new Error("Claude isn’t available on this page.");return json?await s.json(p):(await s(p)).text}
+async function improve(i,b){var e=S.exp[i];if(!lines(e.pts).length){msg("Add a few achievement lines first.");return}b.disabled=true;msg("Claude is rewriting…");
+try{var t=await ask("Rewrite these resume bullet points for a "+e.role+" role. Start each with a strong action verb, keep each to one line, keep every fact as written, and do not invent numbers or tools; where a result would help, add a placeholder like [add number]. Reply with only the bullets, one per line, no dashes or numbering.\n\n"+e.pts);
+e.pts=t.split("\n").map(function(x){return x.replace(/^[-•*\d.\s]+/,"").trim()}).filter(Boolean).join("\n");lists();render();msg("Rewritten. Check the facts and fill in any [add number] spots.")}catch(x){msg(x.message||"Claude couldn’t finish that. Try again.")}b.disabled=false}
+function digest(){return S.name+", "+S.title+"\nSummary: "+S.sum+"\nExperience:\n"+S.exp.map(function(e){return e.role+" at "+e.co+" ("+e.dates+"): "+lines(e.pts).join("; ")}).join("\n")+"\nSkills: "+S.skills}
+function refill(){FL.forEach(function(k){$(k).value=S[k]||""});$("font").value=S.font;$("cc").value=acc();$("sz").value=S.size;$("szv").textContent=S.size+"px";$("cp").checked=!!S.compact;$("rlabel").value=S.label;
+[].forEach.call(document.querySelectorAll("[data-sk]"),function(c){c.checked=!S.hide[c.dataset.sk]});
+$("rs").innerHTML=ST.items.map(function(s,i){return'<option value="'+i+'">'+esc(s.label)+"</option>"}).join("");$("rs").value=ST.cur;$("tr").innerHTML="";lists();pressed();render()}
+function use(i){ST.cur=i;S=ST.items[i];refill()}
+function dl(n,t){try{var b=t instanceof Blob?t:new Blob([t],{type:"text/plain"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download=n;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000)}catch(e){msg("Saving failed. Try a different browser.")}return Promise.resolve()}
+
+ST=load();ST.cur=Math.min(ST.cur||0,ST.items.length-1);ST.items=ST.items.map(norm);S=ST.items[ST.cur];
+LAYOUTS.push(["ats","Plain (ATS)","No colors, easy for software to read"]);
+var css=".ph{width:104px;height:104px;border-radius:50%;object-fit:cover;display:block}.classic .ph{margin:0 auto 10px}.side .ph{margin:0 0 16px;border:3px solid #fff}.modern .ban{display:flex;justify-content:space-between;align-items:center;gap:20px}.modern .ph{border:3px solid #fff;flex:none}.minimal header{position:relative}.minimal .ph{position:absolute;right:0;top:0}.ats{padding:44px 52px;color:#000}.ats h1{font-size:26px}.ats .t{margin-top:2px}.ats .c{margin:4px 0 14px}.ats h2{color:#000;text-transform:uppercase;border-bottom:1px solid #000;padding-bottom:2px}.ats .chips{display:block}.ats .chips span{display:inline;border:0;padding:0;color:#000;border-radius:0}.ats .chips span:not(:last-child)::after{content:', '}.cp section{margin-bottom:9px}.cp .it{margin-bottom:6px}.cp li{margin:0}.cp.classic,.cp.minimal,.cp.ats{padding-top:30px;padding-bottom:30px}.cp.side aside,.cp.side main{padding-top:30px}.cp .ban{padding-top:26px;padding-bottom:20px}.letter .lh{background:var(--a);color:#fff;padding:36px 56px}.letter .lb{padding:34px 56px;white-space:pre-wrap;line-height:1.7}.tb{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.tb .btn{float:none!important;margin:6px 0 0!important;padding:3px 8px;font-size:12px}.btn[aria-pressed=true]{border-color:var(--pri);font-weight:600}#aimsg{font-size:12px;color:var(--mute);min-height:16px;margin-top:6px}.sec2{display:grid;grid-template-columns:1fr 1fr;gap:2px 8px}.sec2 label{margin:4px 0;color:var(--ink);font-size:13px}.sec2 input{width:auto;margin-right:6px}#tr{font-size:13px;margin-top:8px}@media print{.r section,.r .it{break-inside:avoid}}";
+document.head.appendChild(Object.assign(document.createElement("style"),{textContent:css}));
+var ctrl=document.querySelector(".ctrl");
+ctrl.querySelector(".sub").insertAdjacentHTML("afterend",'<div class="row"><select id="rs" aria-label="Saved resumes"></select><button class="btn" id="rnew" style="margin:0;flex:none">New</button><button class="btn" id="rdup" style="margin:0;flex:none">Copy</button><button class="btn" id="rdel" style="margin:0;flex:none">Delete</button></div><label for="rlabel">Name of this resume version</label><input id="rlabel"><div id="aimsg" role="status"></div>');
+document.querySelector("details").insertAdjacentHTML("beforeend",'<label>Accent color (replaces theme)</label><div class="row"><input type="color" id="cc" style="padding:2px;height:36px"><button class="btn" id="ccr" style="margin:0">Use theme color</button></div><label for="sz">Text size: <span id="szv"></span></label><input type="range" id="sz" min="11" max="15" step="0.5"><label><input type="checkbox" id="cp" style="width:auto;margin-right:6px">Compact spacing</label>');
+$("sum").insertAdjacentHTML("beforebegin",'<label>Photo (optional, shown in Sidebar, Banner, Classic and Minimal)</label><div class="row"><input type="file" id="ph" accept="image/*"><button class="btn" id="phr" style="margin:0;flex:none">Remove</button></div>');
+$("reset").insertAdjacentHTML("beforebegin",'<details><summary>More sections</summary><label for="projects">Projects (one per line)</label><textarea id="projects"></textarea><label for="langs">Languages (separate with commas)</label><input id="langs"><label for="refs">References (one per line)</label><textarea id="refs"></textarea></details><details><summary>Show or hide sections</summary><div class="sec2">'+SK.map(function(k){return'<label><input type="checkbox" data-sk="'+k[0]+'">'+k[1]+"</label>"}).join("")+'</div></details><details><summary>Job ad and cover letter</summary><label for="ad">Job ad (paste it here)</label><textarea id="ad"></textarea><div class="row"><button class="btn" id="tl">Tailor summary</button><button class="btn" id="cl">Write cover letter</button></div><div id="tr"></div><label for="cover">Cover letter</label><textarea id="cover" style="min-height:170px"></textarea></details>');
+$("pv").querySelector(".bar").innerHTML='<div><button class="btn" data-mode="resume" aria-pressed="true" style="margin:0">Resume</button> <button class="btn" data-mode="cover" aria-pressed="false" style="margin:0">Cover letter</button></div><span id="pg"></span><div><button class="btn" id="sv" style="margin:0">Save data</button> <label class="btn" style="margin:0;display:inline-block;font-size:15px;color:var(--ink)">Load data<input type="file" id="ld" accept=".json" hidden></label> <button class="btn p" id="print" style="margin:0">Print or PDF</button></div>';
+init();
+["projects","langs","refs","ad","cover"].forEach(function(k){$(k).addEventListener("input",function(){S[k]=$(k).value;render()})});
+$("themes").addEventListener("click",function(){S.custom="";$("cc").value=THEMES[S.theme][1]});
+$("cc").addEventListener("input",function(){S.custom=$("cc").value;pressed();render()});
+$("ccr").onclick=function(){S.custom="";$("cc").value=acc();pressed();render()};
+$("sz").addEventListener("input",function(){S.size=+$("sz").value;$("szv").textContent=S.size+"px";render()});
+$("cp").addEventListener("change",function(){S.compact=$("cp").checked;render()});
+$("rlabel").addEventListener("input",function(){S.label=$("rlabel").value||"Untitled";$("rs").options[ST.cur].text=S.label;save()});
+$("rs").addEventListener("change",function(){use(+$("rs").value)});
+$("rnew").onclick=function(){ST.items.push(norm(Object.assign(sample(),{label:"New resume"})));use(ST.items.length-1)};
+$("rdup").onclick=function(){var c=JSON.parse(JSON.stringify(S));c.label=S.label+" copy";ST.items.push(c);use(ST.items.length-1)};
+var armed=0;$("rdel").onclick=function(){var b=$("rdel");if(ST.items.length<2){msg("Keep at least one resume.");return}if(!armed){armed=1;b.textContent="Sure?";setTimeout(function(){armed=0;b.textContent="Delete"},3000);return}armed=0;b.textContent="Delete";ST.items.splice(ST.cur,1);use(Math.max(0,ST.cur-1))};
+[].forEach.call(document.querySelectorAll("[data-sk]"),function(c){c.addEventListener("change",function(){S.hide[c.dataset.sk]=!c.checked;render()})});
+$("ph").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var s=Math.min(im.width,im.height),c=document.createElement("canvas");c.width=c.height=260;c.getContext("2d").drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,260,260);S.photo=c.toDataURL("image/jpeg",.85);render()};im.onerror=function(){msg("That image couldn’t be read. Try a JPG or PNG file.")};im.src=r.result};r.readAsDataURL(f)};
+$("phr").onclick=function(){S.photo="";$("ph").value="";render()};
+$("tl").onclick=async function(){if(!S.ad.trim()){msg("Paste a job ad first.");return}msg("Claude is reading the ad…");
+try{var r=await ask("Job ad:\n"+S.ad+"\n\nMy resume:\n"+digest()+'\n\nReply with only JSON: {"summary":"a 2-3 sentence resume summary tailored to this ad, using only facts from my resume","keywords":["up to 8 key terms from the ad"],"missing":["ad keywords not in my skills"]}',true);
+$("tr").innerHTML="<p>"+esc(r.summary)+"</p><p>Keywords: "+esc((r.keywords||[]).join(", "))+"</p><p>Not in your skills yet: "+esc((r.missing||[]).join(", ")||"none")+'</p><button class="btn" id="use">Use this summary</button>';
+$("use").onclick=function(){S.sum=r.summary;$("sum").value=S.sum;render();msg("Summary updated.")};msg("")}catch(x){msg(x.message||"Claude couldn’t finish that. Try again.")}};
+$("cl").onclick=async function(){if(!S.ad.trim()){msg("Paste a job ad first.");return}msg("Claude is writing…");
+try{var t=await ask("Write a cover letter for this job ad from the candidate below. Use 3 or 4 short paragraphs, first person, warm and specific, plain text. Use only facts from the resume; do not invent employers, numbers or tools. Use [Hiring manager name] and [Company] where unknown. Start with the greeting and end with a sign-off and the candidate’s name.\n\nJob ad:\n"+S.ad+"\n\nCandidate:\n"+digest());
+S.cover=t.trim();$("cover").value=S.cover;mode="cover";[].forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.setAttribute("aria-pressed",b.dataset.mode===mode)});render();msg("Cover letter ready. Read it and edit anything that isn’t right.")}catch(x){msg(x.message||"Claude couldn’t finish that. Try again.")}};
+document.addEventListener("click",function(e){var t=e.target.closest("button");if(!t)return;
+if(t.dataset.mv){var l=S[t.dataset.l],i=+t.dataset.i,j=i+ +t.dataset.mv;if(j<0||j>=l.length)return;var x=l[i];l[i]=l[j];l[j]=x;lists();render()}
+else if(t.dataset.ai!==undefined)improve(+t.dataset.ai,t);
+else if(t.dataset.mode){mode=t.dataset.mode;[].forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.setAttribute("aria-pressed",b.dataset.mode===mode)});render()}});
+$("sv").onclick=function(){dl("resume-maker-data.json",JSON.stringify(ST,null,1))};
+$("ld").onchange=function(){var f=this.files[0];if(!f)return;f.text().then(function(t){try{var x=JSON.parse(t),it=x.items||(x.exp?[x]:null);if(!it)throw 0;ST={cur:0,items:it.map(norm)};use(0);msg("Loaded "+it.length+" resume"+(it.length>1?"s":"")+".")}catch(e){msg("That isn’t a Resume Maker data file.")}})};
+$("print").onclick=function(){try{window.print()}catch(e){msg("Printing is blocked here. Open the page in its own tab and try again.")}};
+$("reset").onclick=function(){ST.items[ST.cur]=S=norm(Object.assign(sample(),{label:S.label}));refill()};
+var TPL=[
+["Bookkeeper",{layout:"side",theme:0,font:0,title:"Bookkeeper"}],
+["Virtual Assistant",{layout:"modern",theme:7,font:2,title:"Executive Virtual Assistant",sum:"Organized and proactive virtual assistant who keeps calendars, inboxes and projects running smoothly for busy clients. Comfortable across time zones and quick to learn new tools.",
+exp:[{role:"Virtual Assistant",co:"Client or agency name",dates:"2021 – Present",pts:"Managed email, calendar and travel for two executives\nPrepared reports, presentations and meeting notes\nSet up task boards and routines that saved the team hours each week"},{role:"Administrative Assistant",co:"Company name",dates:"2018 – 2021",pts:"Handled filing, scheduling and customer inquiries\nSupported month-end paperwork and document control"}],
+skills:"Calendar management, Email management, Google Workspace, Notion, Trello, Zoom, Data entry, Customer support",certs:"Virtual Assistant Training Course",langs:"English, Filipino"}],
+["Social Media Manager",{layout:"classic",theme:6,font:2,title:"Social Media Manager",sum:"Creative social media manager who plans content, grows communities and turns engagement into customers. Experienced with small business pages and simple monthly reporting.",
+exp:[{role:"Social Media Manager",co:"Business or brand name",dates:"2019 – Present",pts:"Planned and scheduled weekly posts across Facebook and Instagram\nDesigned graphics and short videos in Canva\nReplied to messages and comments to keep the page active\nTracked reach and engagement in a monthly report"}],
+skills:"Content planning, Canva, Meta Business Suite, Copywriting, Community management, Basic video editing, Analytics",certs:"Social Media Marketing Course",projects:"Page growth campaign: add the result you achieved\nProduct launch content series: add what you delivered"}],
+["Fresh graduate",{layout:"minimal",theme:4,font:1,title:"Fresh Graduate, Entry-Level Applicant",sum:"Recent graduate eager to start a career and contribute with a strong work ethic, quick learning and good communication. Seeking an entry-level role where I can grow.",
+exp:[{role:"Intern",co:"Company name",dates:"2025",pts:"Assisted the team with daily tasks and documentation\nLearned company tools and processes quickly"}],
+edu:[{school:"University name",deg:"Bachelor’s degree in your course",dates:"2021 – 2025"}],
+skills:"MS Office, Communication, Teamwork, Time management, Research",certs:"Seminar or training certificate",projects:"Thesis or capstone: describe what you built or studied\nSchool organization role: describe your contribution"}],
+["Plain ATS (any role)",{layout:"ats",theme:4,font:0,title:"Your Job Title",sum:"Two or three sentences on your experience, your strongest skills and the kind of role you want. Use words from the job ad.",
+exp:[{role:"Job title",co:"Company",dates:"Year – Year",pts:"Achievement with a result\nAchievement with a result"}],skills:"Skill one, Skill two, Skill three",certs:""}],
+["Blank",{layout:"classic",theme:0,font:0,name:"",title:"",email:"",phone:"",loc:"",web:"",sum:"",exp:[{role:"",co:"",dates:"",pts:""}],edu:[{school:"",deg:"",dates:""}],skills:"",certs:""}]];
+$("aimsg").insertAdjacentHTML("beforebegin",'<label for="tpl">Start a new resume from a template</label><div class="row"><select id="tpl">'+TPL.map(function(t,i){return'<option value="'+i+'">'+t[0]+"</option>"}).join("")+'</select><button class="btn" id="tpb" style="margin:0;flex:none">Use template</button></div>');
+$("tpb").onclick=function(){var t=TPL[+$("tpl").value];ST.items.push(norm(Object.assign(sample(),JSON.parse(JSON.stringify(t[1])),{label:t[0]})));use(ST.items.length-1);msg("Started a new "+t[0]+" resume. Your other resumes are unchanged.")};
+document.head.appendChild(Object.assign(document.createElement("style"),{textContent:".ats header{overflow:hidden}.ats .ph{float:right;width:88px;height:88px;border-radius:6px}.letter .lh{min-height:140px}"}));
+var _lt=letter;letter=function(){var h=_lt();return S.photo?h.replace('<div class="lh">','<div class="lh" style="position:relative"><img class="ph" style="position:absolute;right:56px;top:18px;border:3px solid #fff" src="'+S.photo+'" alt="">'):h};
+function loadImg(f){return new Promise(function(ok,no){var u=URL.createObjectURL(f),im=new Image();im.onload=function(){URL.revokeObjectURL(u);ok(im)};im.onerror=function(){URL.revokeObjectURL(u);no()};im.src=u})}
+function heicLib(){return new Promise(function(ok,no){if(window.heic2any)return ok();var s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/heic2any/0.0.4/heic2any.min.js";s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
+$("ph").onchange=async function(){var el=this,f=el.files[0];if(!f)return;msg("Adding photo…");
+try{var im;try{im=await loadImg(f)}catch(e){await heicLib();var b=await heic2any({blob:f,toType:"image/jpeg",quality:.9});im=await loadImg(Array.isArray(b)?b[0]:b)}
+var w=im.naturalWidth||im.width,h=im.naturalHeight||im.height,s=Math.min(w,h),c=document.createElement("canvas");c.width=c.height=300;c.getContext("2d").drawImage(im,(w-s)/2,(h-s)/2,s,s,0,0,300,300);S.photo=c.toDataURL("image/jpeg",.85);render();msg("Photo added.")}catch(e){msg("That file couldn’t be read as a photo. Try another image or a screenshot of it.")}el.value=""};
+$("print").className="btn";$("print").textContent="Print";
+$("print").insertAdjacentHTML("beforebegin",'<button class="btn p" id="dpdf" style="margin:0">Download PDF</button> <button class="btn" id="dhtml" style="margin:0">Download HTML</button> ');
+function fname(){return(S.name||"resume").replace(/[^\w\- ]+/g,"").trim().replace(/\s+/g,"-")+(mode==="cover"?"-cover-letter":"-resume")}
+function lib(src,test){return new Promise(function(ok,no){if(test())return ok();var s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
+$("dpdf").onclick=async function(){var p=$("paper"),z=p.style.zoom,b=this;b.disabled=true;msg("Making your PDF…");
+try{await lib("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",function(){return window.html2canvas});await lib("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",function(){return window.jspdf});
+if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+p.style.zoom=1;var cv=await html2canvas(p.firstChild,{scale:2,backgroundColor:"#ffffff",useCORS:true});p.style.zoom=z;
+var d=new jspdf.jsPDF({unit:"mm",format:"a4"}),W=210,H=297,ph=Math.floor(cv.width*H/W),n=Math.max(1,Math.ceil(cv.height/ph-0.01));
+for(var i=0;i<n;i++){var c=document.createElement("canvas");c.width=cv.width;c.height=Math.min(ph,cv.height-i*ph);c.getContext("2d").drawImage(cv,0,i*ph,cv.width,c.height,0,0,cv.width,c.height);if(i)d.addPage();d.addImage(c.toDataURL("image/jpeg",.95),"JPEG",0,0,W,c.height*W/cv.width)}
+await dl(fname()+".pdf",d.output("blob"));msg("")}catch(e){p.style.zoom=z;msg("The PDF couldn’t be made here. Check your connection or open the page in its own tab.")}b.disabled=false};
+$("dhtml").onclick=function(){var st=[].map.call(document.querySelectorAll("style"),function(s){return s.textContent}).join("\n");
+dl(fname()+".html",'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(S.name)+'</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet"><style>'+st+'body{background:#eee}.paper{zoom:1!important}</style></head><body><div class="paper">'+(mode==="cover"?letter():build())+"</div></body></html>")};
+$("print").onclick=function(){try{window.print();msg("If no print window opened, use Download PDF and print that file.")}catch(e){msg("Printing is blocked here. Use Download PDF and print that file.")}};
+refill();
+</script>
+<script>
+/* ===== GOOGLE ADSENSE SETTINGS: replace the values below with your own ===== */
+var ADS={client:"ca-pub-XXXXXXXXXXXXXXXX",slots:{top:"1111111111",bottom:"2222222222"}};
+document.querySelector(".ctrl").insertAdjacentHTML("beforeend",'<p class="plink"><a href="privacy.html">Privacy policy</a></p>');
+(function(){
+if(/X{6}/.test(ADS.client))return;
+var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";
+s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+ADS.client;document.head.appendChild(s);
+function slot(host,id,where){var d=document.createElement("div");d.className="adbox";
+d.innerHTML='<small>Advertisement</small><ins class="adsbygoogle" style="display:block" data-ad-client="'+ADS.client+'" data-ad-slot="'+id+'" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+host.insertAdjacentElement(where,d);try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}}
+slot(document.getElementById("paper"),ADS.slots.bottom,"afterend");
+slot(document.querySelector(".ctrl"),ADS.slots.top,"beforeend");
+})();
+</script>
+</body>
+</html>
