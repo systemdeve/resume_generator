@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-USERNAME.github.io/REPOSITORY-NAME/sitemap.xml
+Sitemap: https://systemdeve/resume_generator/sitemap.xml
